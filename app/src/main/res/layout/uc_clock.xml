@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/clock_background" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center" >
+
+        <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HH:MM"
+            android:id="@+id/text_view_clock"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chu nhat"
+                android:id="@+id/text_view_day_in_week"
+                android:textSize="15sp"
+                android:gravity="top|left" />
+
+            <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DD/MM/YYYY"
+                android:id="@+id/text_view_date"
+                android:textSize="15sp"
+                android:gravity="left|bottom" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.boluclac.android.gialapcuocgoi.activities.MainActivity"
+    android:id="@+id/main_layout">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="false">
+
+        <com.boluclac.android.gialapcuocgoi.components.controls.toolbar.UCToolBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_uc_toolbar"
+            android:layout_gravity="center_horizontal" />
+
+        <com.boluclac.android.gialapcuocgoi.components.controls.clock.UCClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView2"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:name="com.boluclac.android.gialapcuocgoi.activities.fragments.mainmenu.MainMenu"
+        android:id="@+id/fragment_main_menu"
+        class="com.boluclac.android.gialapcuocgoi.activities.fragments.mainmenu.MainMenu"
+        tools:layout="@layout/fragment_main_menu" />
+</android.support.v4.widget.DrawerLayout>
