@@ -22,7 +22,9 @@ public class CommonConstant {
         /* Font Awesome. */
         FONT_AWESOME ("fonts/font-awesome.ttf"),
         /* Domino Font Family. */
-        FONT_DOMINO_SHADOW ("fonts/font-domino-shadow.ttf");
+        FONT_DOMINO_SHADOW ("fonts/font-domino-shadow.ttf"),
+        /* Young and Beautiful. */
+        FONT_YOUNG_AND_BEAUTIFUL ("fonts/font-young-and-beautiful.ttf");
 
         /* path fonts in assets. */
         private String fontPath;

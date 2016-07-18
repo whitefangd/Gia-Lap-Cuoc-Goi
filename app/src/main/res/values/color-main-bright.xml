@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_main_bright_color_primary" >#ffff00</color>
+    <color name="color_main_bright_color_support" >#3333ff</color>
+    <color name="color_main_bright_color_harmony" >#33cc33</color>
+    <color name="color_main_bright_color_ink" >#000000</color>
+</resources>

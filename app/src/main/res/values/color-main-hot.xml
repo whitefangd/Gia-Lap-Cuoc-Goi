@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_main_hot_color_primary" >#ff6161</color>
+    <color name="color_main_hot_color_support" >#66ff99</color>
+    <color name="color_main_hot_color_harmony" >#cccc99</color>
+    <color name="color_main_hot_color_ink" >#ffffff</color>
+</resources>

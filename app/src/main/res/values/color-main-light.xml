@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_main_light_color_primary" >#CCFF99</color>
+    <color name="color_main_light_color_support" >#cc99ff</color>
+    <color name="color_main_light_color_harmony" >#99FFFF</color>
+    <color name="color_main_light_color_ink" >#000000</color>
+</resources>

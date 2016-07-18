@@ -170,6 +170,7 @@ public class UCClock extends FrameLayout implements UCClockBroadcastReceiver.ITi
         //get item layout.
         textViewClock = (TextView) findViewById(ITEM_LAYOUT_TEXTVIEW_CLOCK);
 
+
         //set value.
         setDateTime();
     }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ValueUCClockFormatTime">HH:MM</string>
+    <string name="ValueUCCLockDayOfWeekSunDay">Ch\u1EE7 Nh\u1EADt</string>
+    <string name="ValueUCClockFormatDate">DD/MM/YYYY</string>
+</resources>

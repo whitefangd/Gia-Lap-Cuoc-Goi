@@ -97,7 +97,7 @@ public class UCTextView extends TextView {
      */
     private static Typeface getTypeFace(Context context) {
         if(UCTextView.typeface == null) {
-            UCTextView.typeface = Typeface.createFromAsset(context.getAssets(), CommonConstant.EAssetsFonts.FONT_DOMINO_SHADOW.getFontPath());
+            UCTextView.typeface = Typeface.createFromAsset(context.getAssets(), CommonConstant.EAssetsFonts.FONT_YOUNG_AND_BEAUTIFUL.getFontPath());
         }
         return UCTextView.typeface;
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeMainUCClockBase" parent="ThemeMain">
+        <item name="android:background" >@color/color_main_hot_color_primary</item>
+        <item name="android:textColor" >@color/color_main_hot_color_ink</item>
+    </style>
+    <style name="ThemeMainUCClockTime" parent="ThemeMainUCClockBase">
+        <item name="android:textSize" >150sp</item>
+    </style>
+    <style name="ThemeMainUCClockDayOfWeek" parent="ThemeMainUCClockBase">
+        <item name="android:textSize" >50sp</item>
+        <item name="android:layout_gravity" >center_horizontal|top</item>
+    </style>
+    <style name="ThemeMainUCClockDate" parent="ThemeMainUCClockBase">
+        <item name="android:layout_gravity" >center_horizontal|bottom</item>
+    </style>
+</resources>
