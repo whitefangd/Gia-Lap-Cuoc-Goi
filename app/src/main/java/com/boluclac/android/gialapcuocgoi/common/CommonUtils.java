@@ -2,8 +2,10 @@ package com.boluclac.android.gialapcuocgoi.common;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.text.format.DateFormat;
 import android.text.format.Time;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -52,5 +54,9 @@ public class CommonUtils {
     public static Time getSystemDateTime() {
         getMyCalendar().setToNow();
         return  getMyCalendar();
+    }
+
+    public static String convertTimeToString(Time now, String formatTime) {
+        return now.format(formatTime);
     }
 }

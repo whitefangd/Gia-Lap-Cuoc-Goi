@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="ValueUCClockFormatTime">HH:MM</string>
+    <string name="ValueUCClockFormatTime">%H:%M</string>
     <string name="ValueUCCLockDayOfWeekSunDay">Ch\u1EE7 Nh\u1EADt</string>
-    <string name="ValueUCClockFormatDate">DD/MM/YYYY</string>
+    <string name="ValueUCClockFormatDate">%d/%m/%y</string>
+    <string-array name="ValueUCCLockDayOfWeek" >
+        <item>Ch\u1EE7 Nh\u1EADt </item>
+        <item>Th\u1EE9 Hai </item>
+        <item>Th\u1EE9 Ba </item>
+        <item>Th\u1EE9 T\u01B0 </item>
+        <item>Th\u1EE9 T\u01B0 </item>
+        <item>Th\u1EE9 S\u00E1u </item>
+        <item>Th\u1EE9 B\u1EA3y </item>
+    </string-array>
 </resources>

@@ -1,12 +1,9 @@
 package com.boluclac.android.gialapcuocgoi.components.controls.clock;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Typeface;
 import android.os.Handler;
-import android.text.format.DateFormat;
 import android.text.format.Time;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
@@ -15,10 +12,7 @@ import android.widget.TextView;
 import com.boluclac.android.gialapcuocgoi.R;
 import com.boluclac.android.gialapcuocgoi.common.CommonConstant;
 import com.boluclac.android.gialapcuocgoi.common.CommonUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.TimeZone;
-import java.util.logging.SimpleFormatter;
+import com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextViewIcon;
 
 /**
  * User controls dong ho.
@@ -41,10 +35,23 @@ public class UCClock extends FrameLayout implements UCClockBroadcastReceiver.ITi
     /**
      * P1: constant
      */
+    /* format time. */
+    private static final int UC_CLOCK_FORMAT_TIME = R.string.ValueUCClockFormatTime;
+    /* format date. */
+    private static final int UC_CLOCK_FORMAT_DATE = R.string.ValueUCClockFormatDate;
+
+    private static final int UC_CLOCK_DAY_OF_WEEK = R.array.ValueUCCLockDayOfWeek;
+
     /* layout key. uc clock id. */
     private static final int LAYOUT_UC_CLOCK = R.layout.uc_clock;
     /* item key. text view clock id. */
     private static final int ITEM_LAYOUT_TEXTVIEW_CLOCK = R.id.text_view_clock;
+    /* item key. text view morning or day icon id. */
+    private static final int ITEM_LAYOUT_TEXTVIEW_MORNING_OR_NIGHT = R.id.text_view_morning_or_night;
+    /* item key. text view date id. */
+    private static final int ITEM_LAYOUT_TEXTVIEW_DATE = R.id.text_view_date;
+    /* item key. text view day of week id. */
+    private static final int ITEM_LAYOUT_TEXTVIEW_DAY_OF_WEEK = R.id.text_view_day_in_week;
     /** P2: field static */
     /** P3: field member */
     /**
@@ -62,6 +69,12 @@ public class UCClock extends FrameLayout implements UCClockBroadcastReceiver.ITi
      */
     /* text view clock */
     private TextView textViewClock = null;
+    /* text view clock */
+    private TextView textViewDate = null;
+    /* text view clock */
+    private TextView textViewDayOfWeek = null;
+    /* text view for icon morning or night. */
+    private UCTextViewIcon textViewMorningOrNight = null;
     /** P4: static function */
     /** P5: constructor */
     /**
@@ -169,15 +182,25 @@ public class UCClock extends FrameLayout implements UCClockBroadcastReceiver.ITi
         this.mIntentReceiver = new UCClockBroadcastReceiver(this);
         //get item layout.
         textViewClock = (TextView) findViewById(ITEM_LAYOUT_TEXTVIEW_CLOCK);
-
+        textViewDate = (TextView) findViewById(ITEM_LAYOUT_TEXTVIEW_DATE);
+        textViewDayOfWeek = (TextView) findViewById(ITEM_LAYOUT_TEXTVIEW_DAY_OF_WEEK);
+        textViewMorningOrNight = (UCTextViewIcon) findViewById(ITEM_LAYOUT_TEXTVIEW_MORNING_OR_NIGHT);
 
         //set value.
         setDateTime();
     }
 
     private void setDateTime() {
+        String formatTime = getResources().getString(UC_CLOCK_FORMAT_TIME);
+        String formatdate = getResources().getString(UC_CLOCK_FORMAT_DATE);
+        String[] dayOfWeek = getResources().getStringArray(UC_CLOCK_DAY_OF_WEEK);
+
         Time now = CommonUtils.getSystemDateTime();
-        textViewClock.setText(now.hour + ":" + now.minute);
+
+        textViewClock.setText(CommonUtils.convertTimeToString(now, formatTime));
+        textViewDate.setText(CommonUtils.convertTimeToString(now, formatdate));
+        textViewDayOfWeek.setText(dayOfWeek[now.weekDay]);
+        textViewMorningOrNight.setMorningNight(CommonConstant.EMorningNight.getMorningOrNight(now));
     }
 
     /**

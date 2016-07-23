@@ -5,13 +5,17 @@
         <item name="android:textColor" >@color/color_main_hot_color_ink</item>
     </style>
     <style name="ThemeMainUCClockTime" parent="ThemeMainUCClockBase">
-        <item name="android:textSize" >150sp</item>
+        <item name="android:textSize" >75sp</item>
     </style>
     <style name="ThemeMainUCClockDayOfWeek" parent="ThemeMainUCClockBase">
-        <item name="android:textSize" >50sp</item>
+        <item name="android:textSize" >20sp</item>
         <item name="android:layout_gravity" >center_horizontal|top</item>
     </style>
     <style name="ThemeMainUCClockDate" parent="ThemeMainUCClockBase">
+        <item name="android:textSize" >20sp</item>
         <item name="android:layout_gravity" >center_horizontal|bottom</item>
+    </style>
+    <style name="ThemeMainUCClockIcon" parent="ThemeMainUCClockBase">
+        <item name="android:textSize" >100sp</item>
     </style>
 </resources>

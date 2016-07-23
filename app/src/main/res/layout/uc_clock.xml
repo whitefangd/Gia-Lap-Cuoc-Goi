@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ThemeMainUCClockBase"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/ThemeMainUCClockBase"
-    android:orientation="vertical"  >
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+        <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextViewIcon
+            android:id="@+id/text_view_morning_or_night"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ValueUCClockFormatTime"
-            android:id="@+id/text_view_clock"
-            style="@style/ThemeMainUCClockTime" />
+            style="@style/ThemeMainUCClockIcon"
+            android:text="AAA" />
 
-        <FrameLayout
-            android:orientation="vertical"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+            <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextViewDateTime
+                android:id="@+id/text_view_clock"
+                style="@style/ThemeMainUCClockTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ValueUCClockFormatDate"
-                android:id="@+id/text_view_date"
-                style="@style/ThemeMainUCClockDate" />
+                android:text="@string/ValueUCClockFormatTime" />
 
-            <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextView
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ValueUCCLockDayOfWeekSunDay"
-                android:id="@+id/text_view_day_in_week"
-                style="@style/ThemeMainUCClockDayOfWeek" />
-        </FrameLayout>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextViewDateTime
+                    android:id="@+id/text_view_date"
+                    style="@style/ThemeMainUCClockDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ValueUCClockFormatDate" />
+
+                <com.boluclac.android.gialapcuocgoi.components.controls.textviewex.UCTextViewDateTime
+                    android:id="@+id/text_view_day_in_week"
+                    style="@style/ThemeMainUCClockDayOfWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ValueUCCLockDayOfWeekSunDay" />
+            </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
+
 </FrameLayout>

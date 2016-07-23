@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ValueUCClockFormatTime">HH:MM</string>
+    <string name="ValueUCClockFormatTime">%H:%M</string>
     <string name="ValueUCCLockDayOfWeekSunDay">Sunday</string>
-    <string name="ValueUCClockFormatDate">MM/DD/YYYY</string>
+    <string name="ValueUCClockFormatDate">%m/%d/%y</string>
+    <string-array name="ValueUCCLockDayOfWeek" >
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
 </resources>
